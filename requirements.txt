@@ -1,0 +1,22 @@
+For Windows, use the following versions
+For Mac/Linus, get the latest 
+
+
+torch==1.7.1
+matplotlib==3.3.3
+torch_summary==1.4.5
+numpy==1.19.1
+scipy==1.5.2
+librosa==0.8.0
+torchsummary==1.5.1
+
+
+
+The following 3rd party packages are included here, and some have been modified
+-------------------------------------------------------------------------------
+
+gtfblib (Joachim Thiemann. “A Sparse Auditory Envelope Representation with Iterative Reconstruction for Audio Coding”. Ph.D. Thesis. McGill University, 2011.)
+
+pycochleagram. (R. Gonzales. “Pycochleogram : Generate Cochleagrams Natively in Python.” Documentation and code available online at : https://pycochleagram.readthedocs.io/en/latest/index.html.) 
+
+
