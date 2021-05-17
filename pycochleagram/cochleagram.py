@@ -126,7 +126,6 @@ def cochleagram(signal, sr, n, low_lim, hi_lim, sample_factor,
     erb_kwargs = {'no_highpass': True, 'no_lowpass': True}
   else:
     erb_kwargs = {}
-  print(f'Hello. {erb_kwargs}')
   filts, hz_cutoffs, freqs = erb.make_erb_cos_filters_nx(batch_signal.shape[1],
       sr, n, low_lim, hi_lim, sample_factor, padding_size=padding_size,
       full_filter=True, strict=strict, **erb_kwargs)
@@ -146,7 +145,7 @@ def cochleagram(signal, sr, n, low_lim, hi_lim, sample_factor,
   # plt.savefig(wfn)
   # plt.show()
   # ipdb.set_trace()
-  print(f' how many batches ? {batch_signal.shape[0]} each is of size {batch_signal.shape[1]}')
+  #print(f' how many batches ? {batch_signal.shape[0]} each is of size {batch_signal.shape[1]}')
   is_batch = batch_signal.shape[0] > 1
   for i in range(batch_signal.shape[0]):
     # if is_batch:
@@ -192,7 +191,7 @@ def cochleagram(signal, sr, n, low_lim, hi_lim, sample_factor,
   # end of batches
   sb_out = sb_out.squeeze()
   
-  print(f' env_sb_out size = {env_sb_out.shape}, is real ? {np.isrealobj(env_sb_out)}, sb_out size = {sb_out.shape}, is real ? {np.isrealobj(sb_out)}')
+  #print(f' env_sb_out size = {env_sb_out.shape}, is real ? {np.isrealobj(env_sb_out)}, sb_out size = {sb_out.shape}, is real ? {np.isrealobj(sb_out)}')
   if ret_mode == 'all':
     out_dict = {}
     # add all local variables to out_dict
